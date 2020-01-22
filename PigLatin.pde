@@ -35,14 +35,7 @@ if(sWord.charAt(i) == 0){
 
 return -1;
 }
-public int findCon(String sWord){
-if(sWord.charAt(0) != 'q'|| sWord.charAt(0) != 'a' || sWord.charAt(0) != 'e' || sWord.charAt(0) != 'o' || sWord.charAt(0) != 'o' || sWord.charAt(0) != 'u'){
-		return 6;
-	
- }
- 
- return 7;
-}
+
 
 
 public String pigLatin(String sWord)
@@ -61,14 +54,8 @@ public String pigLatin(String sWord)
 	{
 		return sWord + "ay";
 	}
-	else if(findCon(sWord) == 6){
-		return sWord.substring(1,sWord.length()) + sWord.substring(0,1)+ "ay";
+	else {return(sWord.substring(findFirstVowel(sWord)) + sWord.substring(0,findFirstVowel(sWord)) + "ay");
 	}
-	else if(sWord.substring(0,sWord.length()) == "three"){
-		return sWord.substring(2,sWord.length()) + sWord.substring(0,2)+ "ay";
-	}
-	else
-	{
-		return "ERROR!";
-	}
+	
+	
 }
